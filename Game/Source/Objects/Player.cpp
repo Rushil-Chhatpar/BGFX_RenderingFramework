@@ -39,7 +39,7 @@ void Player::Update(float deltaTime)
 
     vec2 dir;
 
-    if( m_pController->WasPressed( Controller::Mask::Up ) )
+    if( m_pController->IsHeld( Controller::Mask::Up ) )
     {
         dir.y += 1;
     }

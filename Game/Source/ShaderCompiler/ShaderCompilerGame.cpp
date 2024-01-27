@@ -11,7 +11,7 @@
 
 #include "ShaderCompilerGame.h"
 #include <windows.h>
-#include <atlstr.h>
+//#include <atlstr.h>
 #include <math.h>
 #include <algorithm>
 

@@ -90,7 +90,7 @@ MarioKartScene::MarioKartScene(fw::GameCore* GameCore)
     m_pComponentManager->AddComponent(new fw::MarioKartPhysicsComponent(m_Mario, m_pController));
     m_pComponentManager->AddComponent(new fw::CoinCountComponent(m_Mario));
 
-    //FOR JAZ
+    
     m_Mario->GetComponent<fw::MarioKartPhysicsComponent>()->SetSpeed(0.01f);
     m_Mario->GetComponent<fw::MarioKartPhysicsComponent>()->SetAngularSpeed(4.0f);
 

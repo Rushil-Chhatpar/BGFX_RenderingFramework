@@ -176,53 +176,14 @@ Game::Game(fw::FWCore& fwCore)
 
     m_pComponentManager = new fw::ComponentManager();
 
-    // Create a physics world.
-    //b2Vec2 gravity(0, -10);
-    //m_pPhysicsWorld = new b2World(gravity);
-    //m_pPhysicsWorld->SetContactListener(m_pContactListener);
-
-    //// Create a controller.
-    //m_pController = new Controller();
-
-    //// Create some GameObjects.
-    //m_pCamera = new fw::Camera(this, vec3(5, 5, 0));
-
-    //m_pPlayer = new Player(this, m_pController, "Player");
-    //m_Objects.push_back(m_pPlayer);
-    //m_pComponentManager->AddComponent(new fw::Transform(m_pPlayer, vec3(0, 5, 0), vec3(1, 1, 1), vec3(0, 0, 0)));
-    //m_pComponentManager->AddComponent(new fw::Render(m_pPlayer, m_pMeshes["Sprite"], m_pMaterials["MegaMan"]));
-    //m_pComponentManager->AddComponent(new fw::Physics(m_pPlayer, m_pPlayer->CreateBody(m_pPhysicsWorld, b2_dynamicBody)));
-
-    //m_Objects.push_back(new fw::GameObject(this, "Object 1", vec3(0, 0, 0), m_pMeshes["Triangle"], m_pMaterials["VertexColor"]));
-    //m_Objects.push_back(new fw::GameObject(this, "Object 2", vec3(10, 10, 0), m_pMeshes["Triangle"], m_pMaterials["Blue"]));
-    //m_Objects.push_back(new fw::GameObject(this, "Object 3", vec3(9, -1, 0), m_pMeshes["Square"], m_pMaterials["VertexColor"]));
-    //m_Objects.push_back(new fw::GameObject(this, "Object 4", vec3(1, 1, 0), m_pMeshes["Square"], m_pMaterials["VertexColor"]));
-    //m_Objects.push_back(new fw::GameObject(this, "Object 5", vec3(1, 9, 0), m_pMeshes["Square"], m_pMaterials["Blue"]));
-    //m_Objects.push_back(new fw::GameObject(this, "Cube", vec3(10, 0, 0), m_pMeshes["Cube"], m_pMaterials["VertexColor"]));
-    //m_Objects.push_back(new fw::GameObject(this, "Die", vec3(3, -2, 0), m_pMeshes["Die"], m_pMaterials["Die"]));
-
-
     
-
-    //fw::GameObject* tempObject = new fw::GameObject(this, "Temp");
-    //m_Objects.push_back(tempObject);
-    //m_pComponentManager->AddComponent(new fw::Transform(tempObject, vec3(0, 0, 0), vec3(1, 1, 1), vec3(0, 0, 0)));
-    //m_pComponentManager->AddComponent(new fw::Render(tempObject, m_pMeshes["Die"], m_pMaterials["Die"]));
-    //m_pComponentManager->AddComponent(new fw::Physics(tempObject, tempObject->CreateBody(m_pPhysicsWorld, b2_staticBody)));
-
-    //fw::GameObject* tempObject2 = new fw::GameObject(this, "Temp2");
-    //m_Objects.push_back(tempObject2);
-    //m_pComponentManager->AddComponent(new fw::Transform(tempObject2, vec3(1, 1, 0), vec3(1, 1, 1), vec3(0, 0, 0)));
-    //m_pComponentManager->AddComponent(new fw::Render(tempObject2, m_pMeshes["Die"], m_pMaterials["Die"]));
-    //m_pComponentManager->AddComponent(new fw::Physics(tempObject2, tempObject2->CreateBody(m_pPhysicsWorld, b2_staticBody)));
-
     //DisableGameObject(tempObject2);
     //EnableGameObject(tempObject2);
 
     //m_pPhysicsScene = new PhysicsScene(this);
     //m_pMarioKartScene = new MarioKartScene(this);
     //m_pMarioKartScene = new HeightMapScene(this);
-    m_ActiveScene = new HeightMapScene(this);
+    m_ActiveScene = new MarioKartScene(this);
 }
 
 Game::~Game()

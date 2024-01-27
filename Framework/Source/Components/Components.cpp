@@ -190,14 +190,14 @@ void fw::MarioKartPhysicsComponent::UpdatePhysicsMovement(float deltaTime)
 
     float angleScalar = 0.0f;
 
-    if (m_pController->WasPressed(Controller::Mask::Up))
+    if (m_pController->IsHeld(Controller::Mask::Up))
         updir += 1;
-    else if (m_pController->WasPressed(Controller::Mask::Down))
+    else if (m_pController->IsHeld(Controller::Mask::Down))
         updir -= 1;
 
-    if (m_pController->WasPressed(Controller::Mask::Left))
+    if (m_pController->IsHeld(Controller::Mask::Left))
         angleScalar -= 1;
-    else if (m_pController->WasPressed(Controller::Mask::Right))
+    else if (m_pController->IsHeld(Controller::Mask::Right))
         angleScalar += 1;
 
     //FOR JAZ
